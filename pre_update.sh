@@ -5,7 +5,7 @@ backup_config="/tmp/credentials_backup"
 
 rm -f "$backup_config"
 
-for key in "app-id" "storage-id"; do
+for key in "app-id" "storage-id" "auth-token"; do
 	v=$(sed -n "s/.*$key *= *\([^ ]*.*\)/\1/p" < "$config_file")
 	echo "$key = $v" >> "$backup_config"
 done
