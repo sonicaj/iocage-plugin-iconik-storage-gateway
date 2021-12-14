@@ -1,6 +1,6 @@
 #!/bin/sh
 
-config_file="/usr/local/etc/cantemo/iconik_storage_gateway/config.ini"
+config_file="/usr/local/cantemo/iconik_storage_gateway/config.ini"
 backup_config="/tmp/credentials_backup"
 
 if [ ! -f "$backup_config" ]; then
