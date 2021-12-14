@@ -12,3 +12,5 @@ for key in "app-id" "storage-id" "auth-token"; do
 	v=$(sed -n "s/.*$key *= *\([^ ]*.*\)/\1/p" < "$backup_config")
 	sed -i -e "s/.*\($key\) *= *\([^ ]*.*\)/\1 = $v/g" "$config_file"
 done
+
+rm -f "$backup_config"
